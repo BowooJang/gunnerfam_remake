@@ -1,0 +1,163 @@
+.total {
+  padding-left: 10px;
+}
+
+.main {
+  padding: 0px;
+  font-family: "jaemok";
+
+  /* background-color: rgb(250, 227, 227); */
+}
+
+#menucon {
+  display: grid;
+  grid-template-columns: 230px 700px;
+}
+
+.menu {
+  /*background-color: rgb(231, 192, 180); */
+  text-decoration: none;
+  font-family: "naeyong2";
+  font-size: 18px;
+  margin-top: 0px;
+
+  padding-left: 70px;
+  list-style: none;
+}
+
+#what {
+  color: rgb(250, 0, 0);
+}
+
+h1 {
+  margin: 0;
+  padding-left: 60px;
+}
+
+/* 아스날패밀리(제목)         */
+h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 1px;
+  font-family: "jaemok";
+  font-size: 100px;
+  font-weight: normal;
+  padding-left: 70px;
+}
+
+li {
+  list-style: none;
+}
+
+h3 {
+  padding: 25px;
+  font-weight: 100;
+  font-size: 30px;
+  padding-left: 45px;
+  font-family: "naeyong2";
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content {
+  /*background-color: bisque; */
+
+  font-family: "naeyong2";
+  /*background-color: aquamarine; */
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 1px;
+}
+
+.yong {
+  font-size: 18px;
+  margin-top: 40px;
+  margin-left: 28px;
+  padding-right: 100px;
+  display: flex;
+}
+
+.menu_button {
+  position: absolute;
+  right: 30px;
+  top: 160px;
+  font-size: 20px;
+  display: none;
+}
+
+/*왼쪽 여백 없애기 */
+@media screen and (max-width: 800px) {
+  .menu,
+  h1,
+  h2 {
+    padding-left: 0px;
+  }
+}
+
+/* 반응형 웹 만들기.  
+munu에는 햄버거 ->클릭하면 메뉴바 생성
+content에는 전체화면
+*/
+
+/* 실제로 넣을때는 500으로 해야함 폰사이즈!! */
+@media screen and (max-width: 600px) {
+  #menucon {
+    display: grid;
+    grid-template-columns: 550px 700px;
+  }
+
+  .menu {
+    padding-left: 0px;
+    display: none;
+    /*background-color: yellowgreen; */
+    flex-direction: column;
+  }
+  .content {
+    display: flex;
+    width: 100%;
+    margin-right: 0px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin-left: 0px;
+  }
+
+  h3 {
+    margin-top: 40px;
+  }
+
+  .yong {
+    text-align: left;
+  }
+
+  h2 {
+    font-family: "naeyong2";
+    font-size: 30px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .menu_button {
+    display: block;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}
+
+@font-face {
+  font-family: "jaemok";
+  src: url("font/jaemok.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "naeyong2";
+  src: url("font/naeyong2.ttf") format("truetype");
+}
