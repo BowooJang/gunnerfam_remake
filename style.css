@@ -108,7 +108,7 @@ content에는 전체화면
 @media screen and (max-width: 600px) {
   #menucon {
     display: grid;
-    grid-template-columns: 550px 700px;
+    grid-template-columns: 550px;
   }
 
   .menu {
@@ -152,7 +152,15 @@ content에는 전체화면
 
   .menu.active {
     display: flex;
+    flex-direction: column;
   }
+
+  .content.active {
+    display: none;
+  }
+
+  /*여기밑에는 버튼눌렀을때 화면 쪼개지는거
+  바꾸려고 막 해보는거.*/
 }
 
 @font-face {
