@@ -116,7 +116,10 @@ content에는 전체화면
     display: none;
     /*background-color: yellowgreen; */
     flex-direction: column;
+    text-align: center;
+    margin-top: 80px;
   }
+
   .content {
     display: flex;
     width: 100%;
