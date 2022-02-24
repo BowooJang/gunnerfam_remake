@@ -105,10 +105,12 @@ content에는 전체화면
 */
 
 /* 실제로 넣을때는 500으로 해야함 폰사이즈!! */
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 400px) and (max-width: 500px) {
   #menucon {
     display: grid;
-    grid-template-columns: 550px;
+    grid-template-columns: 100%;
+
+    /* 500px*/
   }
 
   .menu {
@@ -117,16 +119,21 @@ content에는 전체화면
     /*background-color: yellowgreen; */
     flex-direction: column;
     text-align: center;
+    width: 100%;
     margin-top: 80px;
+    font-size: 20px;
+    /* width: calc(100% - 10%); */
   }
 
   .content {
     display: flex;
-    width: 100%;
+    width: 115%;
     margin-right: 0px;
-    flex-grow: 1;
+    /*background-color: antiquewhite; */
     flex-wrap: wrap;
-    margin-left: 0px;
+    padding: 0%;
+
+    text-align: center;
   }
 
   h3 {
@@ -135,6 +142,73 @@ content에는 전체화면
 
   .yong {
     text-align: left;
+  }
+
+  h2 {
+    font-family: "naeyong2";
+    font-size: 30px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .menu_button {
+    display: block;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content.active {
+    display: none;
+  }
+
+  /*여기밑에는 버튼눌렀을때 화면 쪼개지는거
+  바꾸려고 막 해보는거.*/
+}
+
+@media screen and (max-width: 400px) {
+  #menucon {
+    display: grid;
+    grid-template-columns: 100%;
+
+    /* 500px*/
+  }
+
+  .menu {
+    padding-left: 0px;
+    display: none;
+    /*background-color: yellowgreen; */
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin-top: 80px;
+    font-size: 15px;
+    /* width: calc(100% - 10%); */
+  }
+
+  .content {
+    display: flex;
+    width: 115%;
+    margin-right: 0px;
+    /* background-color: antiquewhite; */
+    flex-wrap: wrap;
+    padding: 0%;
+
+    text-align: center;
+  }
+
+  h3 {
+    margin-top: 40px;
+  }
+
+  .yong {
+    text-align: left;
+    font-size: 14px;
+    width: 125%;
   }
 
   h2 {
